@@ -261,6 +261,53 @@
     A. Metode Eliminasi Gauss
   </a>
   
+    <nav class="md-nav" aria-label="A. Metode Eliminasi Gauss">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_algoritma_eliminasi_gauss" class="md-nav__link">
+    1. Algoritma Eliminasi Gauss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_code_metode_eliminasi_gauss" class="md-nav__link">
+    2. Code Metode Eliminasi Gauss
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b_metode_jacobi" class="md-nav__link">
+    B. Metode Jacobi
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Metode Jacobi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_algoritma_metode_jacobi" class="md-nav__link">
+    1. Algoritma Metode Jacobi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_code_metode_jacobi" class="md-nav__link">
+    2. Code Metode Jacobi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -316,6 +363,53 @@
     A. Metode Eliminasi Gauss
   </a>
   
+    <nav class="md-nav" aria-label="A. Metode Eliminasi Gauss">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_algoritma_eliminasi_gauss" class="md-nav__link">
+    1. Algoritma Eliminasi Gauss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_code_metode_eliminasi_gauss" class="md-nav__link">
+    2. Code Metode Eliminasi Gauss
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b_metode_jacobi" class="md-nav__link">
+    B. Metode Jacobi
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Metode Jacobi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_algoritma_metode_jacobi" class="md-nav__link">
+    1. Algoritma Metode Jacobi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_code_metode_jacobi" class="md-nav__link">
+    2. Code Metode Jacobi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -351,7 +445,293 @@
      solusi untuk menyelesaikan ke 2 persamaan di atas akan di jelaskan di bawah ini</li>
 </ol>
 <h4 id="a_metode_eliminasi_gauss">A. Metode Eliminasi Gauss<a class="headerlink" href="#a_metode_eliminasi_gauss" title="Permanent link">&para;</a></h4>
-<p>Eliminasi Gauss merupakan sebuah metode untuk menyelesaikan persamaan linier </p>
+<p>Eliminasi Gauss merupakan sebuah metode untuk menyelesaikan persamaan linier dengan cara mengubah sistem persamaan linier tersebut menjadi sebuah matrik yang berbentuk segitiga atas yaitu semua koefisien dibawah diagonal utamanya bernilai nol, lalu mensubtitusikan balik agar mendapatkan bentuk segitiga atas tersebut dar sistem persamaan linier yang diberikan.</p>
+<p>berikut ini algoritmanya</p>
+<p>contoh untuk menyelesaikan persamaan berikut:</p>
+<p>
+<script type="math/tex">6a - 2b + 2c +  4d = 16</script>
+</p>
+<p>
+<script type="math/tex">12a - 8b + 6c + 10d = 26</script>
+</p>
+<p>
+<script type="math/tex">3a - 13b + 9c + 3d = -19</script>
+</p>
+<p>
+<script type="math/tex">-6a + 4b + c + -18d = -34</script>
+</p>
+<h5 id="1_algoritma_eliminasi_gauss">1. Algoritma Eliminasi Gauss<a class="headerlink" href="#1_algoritma_eliminasi_gauss" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Deklarasikan sistem persamaan linier dalam bentuk matrik</li>
+<li>Buat perulangan for dalam for (perulangan bersarang) untuk melakukan eliminasi maju dengan ketentuan sebagai berikut:</li>
+<li>perulangan pertama akan melakukan perulangan sebanyak panjang matrik yang dimulai dari 0</li>
+<li>perulangan kedua berada didalam perulangan pertama dan akan menentukan nilai faktor dari nilai pengali pembuat 0 dan mengubah nilai matrik yang dikurangi dengan nilai dari fakto yang dikalikan dengan matrik di indeks atas diagonal.</li>
+<li>perulangan ketiga berada pada perulangan kedua yang digunakan unutk mengubah nilai matrik di indeks bawah diagonal menjadi nol, dengan cara dikurangi nilai dari faktor yang dikalikan dengan matrik di indeks atas diagonal.</li>
+<li>perulangan kedua berada didalam perulangan kedua yang berguna untuk menampilkan nilai matrik</li>
+<li>Buat perulangan for dalam for (perulangan bersarang) untuk melakukan subtitusi mundur dengan ketentuan sebagai berikut.</li>
+<li>perulangan pertama dimulai dari indeks terakhir sabanyak panjang matrik untuk mengambil hasil nilai dari <script type="math/tex">x_{n}</script> hingga <script type="math/tex">x_{i}</script> dan mengubah nilai matrik di indeks yang menyimpan nilai <script type="math/tex">x_{i}</script> dengan nilai yang diperoleh di perulangan kedua yang dibagi dengan koefisien <script type="math/tex">x_{i}</script>.</li>
+<li>perulangan kedua berada di dalam perulangan pertama yang akan mengurangi nilai hasil dengan nilai koefisien yang dikalikan dengan nilai <script type="math/tex">x_{i}</script>.</li>
+<li>perulaqngan ketiga berada didalam perulangan pertama untuk menampilkan nilai matrik yang sudah di ubah.</li>
+<li>menampilkan nilai dari <script type="math/tex">x_{1}</script> hingga <script type="math/tex">x_{n}</script>.</li>
+</ol>
+<h5 id="2_code_metode_eliminasi_gauss">2. Code Metode Eliminasi Gauss<a class="headerlink" href="#2_code_metode_eliminasi_gauss" title="Permanent link">&para;</a></h5>
+<p>hasil implementasi algoritma di atas sebagai berikut</p>
+<div class="codehilite"><pre><span></span><code><span class="n">matrik</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">[[</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="s2">&quot;X1&quot;</span><span class="p">],[</span><span class="mi">16</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">12</span><span class="p">,</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="s2">&quot;X2&quot;</span><span class="p">],[</span><span class="mi">26</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">13</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="s2">&quot;X3&quot;</span><span class="p">],[</span><span class="o">-</span><span class="mi">19</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">18</span><span class="p">],[</span><span class="s2">&quot;X4&quot;</span><span class="p">],[</span><span class="o">-</span><span class="mi">34</span><span class="p">]],</span>
+<span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penyelesaiaan Sistem Persamaan Linear Dari&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">matrik</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menggunakan Metode Eliminasi Gauss&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;=======================================================&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;- METODE ELIMINNASI GAUSS  -&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;=======================================================&quot;</span><span class="p">)</span>
+<span class="c1">#untuk Eliminasi Maju</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)):</span>
+        <span class="n">faktor</span><span class="o">=</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">/</span><span class="n">matrik</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">k</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;faktor = &quot;</span><span class="p">,</span><span class="n">faktor</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)):</span>
+            <span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="n">faktor</span><span class="o">*</span><span class="n">matrik</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]),</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="n">faktor</span><span class="o">*</span><span class="n">matrik</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]),</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">matrik</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1">#Untuk Substitusi Mundur</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">sum</span><span class="o">=</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)):</span>
+        <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">-</span> <span class="nb">round</span><span class="p">((</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">matrik</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]),</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="o">/</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">],</span><span class="mi">4</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">matrik</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nilai Variabel yang diperoleh&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x</span><span class="si">{</span><span class="n">u</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">matrik</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;=======================================================&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>dan hasil ketika program tersebut di jalan kan sebagai berikut</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Penyelesaiaan</span> <span class="n">Sistem</span> <span class="n">Persamaan</span> <span class="n">Linear</span> <span class="n">Dari</span>
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mi">12</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">26</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">13</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">19</span><span class="p">]]</span>
+<span class="p">[[</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">18</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">34</span><span class="p">]]</span>
+<span class="n">Menggunakan</span> <span class="n">Metode</span> <span class="n">Eliminasi</span> <span class="n">Gauss</span>
+<span class="o">=======================================================</span>
+<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;-</span> <span class="n">METODE</span> <span class="n">ELIMINNASI</span> <span class="n">GAUSS</span>  <span class="o">-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<span class="o">=======================================================</span>
+<span class="n">faktor</span> <span class="o">=</span>  <span class="mf">2.0</span>
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">13</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">19</span><span class="p">]]</span>
+<span class="p">[[</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">18</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">34</span><span class="p">]]</span>
+
+
+<span class="n">faktor</span> <span class="o">=</span>  <span class="mf">0.5</span>
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">12.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">27.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">18</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">34</span><span class="p">]]</span>
+
+
+<span class="n">faktor</span> <span class="o">=</span>  <span class="o">-</span><span class="mf">1.0</span>
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">12.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">27.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">14.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">18.0</span><span class="p">]]</span>
+
+
+<span class="n">faktor</span> <span class="o">=</span>  <span class="mf">3.0</span>
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">9.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">14.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">18.0</span><span class="p">]]</span>
+
+
+<span class="n">faktor</span> <span class="o">=</span>  <span class="o">-</span><span class="mf">0.5</span>
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">9.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">13.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">21.0</span><span class="p">]]</span>
+
+
+<span class="n">faktor</span> <span class="o">=</span>  <span class="mf">2.0</span>
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">9.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">3.0</span><span class="p">]]</span>
+
+
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">9.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">3.0</span><span class="p">]]</span>
+
+
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">9.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">3.0</span><span class="p">]]</span>
+
+
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">9.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">3.0</span><span class="p">]]</span>
+
+
+<span class="p">[[</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">9.0</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">3.0</span><span class="p">]]</span>
+
+
+<span class="n">Nilai</span> <span class="n">Variabel</span> <span class="n">yang</span> <span class="n">diperoleh</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0</span>
+<span class="n">x4</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="o">=======================================================</span>
+</code></pre></div>
+
+<h4 id="b_metode_jacobi">B. Metode Jacobi<a class="headerlink" href="#b_metode_jacobi" title="Permanent link">&para;</a></h4>
+<p>Metode jacobi adalah metode yang digunakan untuk menyelesaikan persamaan linier dengan cara melakukan iterasi. Secara umum dapat dituliskan sebagai beriku:
+<script type="math/tex; mode=display">
+x^{(k+1)}_{i} =\left( b_{i}-\sum^{i-1}_{j=1}a_{ij}x^{k}_{j}-\sum^{n}_{j=i+1}a_{ij}x^{k}_{j} \right)/a_{ii}
+</script>
+contoh soal:</p>
+<p>Selesaikan persamaan linier 4 variabel berikut dengan menggunakan metode jacobi.</p>
+<p>
+<script type="math/tex">10a - b + 2c = 6</script>
+</p>
+<p>
+<script type="math/tex">-a + 11b - c + 3d = 25</script>
+</p>
+<p>
+<script type="math/tex">2a - b + 10c - d = -11</script>
+</p>
+<p>
+<script type="math/tex">3b - c + 8d = 15</script>
+</p>
+<h5 id="1_algoritma_metode_jacobi">1. Algoritma Metode Jacobi<a class="headerlink" href="#1_algoritma_metode_jacobi" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Deklarasikan sistem persamaan dalan bentuk matrik</li>
+<li>Deklarasikan nilai <script type="math/tex">X_{i}</script> dari hasil analitik.</li>
+<li>Deklarasikan array kosong</li>
+<li>Buat perulangan untuk menampilkan sistem persamaan linier dalam benutk matrik</li>
+<li>Tentukan banyak nya iterasi (n)</li>
+<li>Buat perulangan untuk membuat nilai awal <script type="math/tex">X_{i}=0</script>
+</li>
+<li>Buat perulangan for dalam for (perulangan bersarang) dengan ketentuan sebagai berikut:</li>
+<li>Perulangan pertama sebanyak n inputan yang akan menentukan berapa kali perulangan tersebut melakukan iterasi dan mengahapus nilai di dalam array kosong</li>
+<li>perulangan kedua berada di dalam perulangan pertama dan melakukan perulangan sebanyak panjang dari matrik untuk mengambil nilai hasil didalam matrik lalu menampung nilai yang dihasilkan dari perulangan ketiga kedalam array kosong.</li>
+<li>perulangan keempat berada di dalam perulangan pertama dan melakukan perulangan sebanyak panjang matrik unutk mengubah nilai <script type="math/tex">X_{i}</script> dengan nilai yang ditampung didalam array kosong lalu menghitung nilai eror yang dihasilkan kemudian menampilkan nilai <script type="math/tex">X_{i}</script> dan eror yang dihasilkan pada iterasi ke-k.</li>
+</ol>
+<h5 id="2_code_metode_jacobi">2. Code Metode Jacobi<a class="headerlink" href="#2_code_metode_jacobi" title="Permanent link">&para;</a></h5>
+<p>Berikut ini merupakan code hasil dari implementasi algoritma di atas:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">matrik</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">[[</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],[</span><span class="s2">&quot;X1&quot;</span><span class="p">],[</span><span class="mi">6</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],[</span><span class="s2">&quot;X2&quot;</span><span class="p">],[</span><span class="mi">25</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="s2">&quot;X3&quot;</span><span class="p">],[</span><span class="o">-</span><span class="mi">11</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],[</span><span class="s2">&quot;X4&quot;</span><span class="p">],[</span><span class="mi">15</span><span class="p">]],</span> 
+<span class="p">]</span>
+<span class="n">true</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">K</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penyelesaiaan Sistem Persamaan Linear Dari&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">matrik</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menggunakan Metode Jacobi&quot;</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan banyak iterasi : &quot;</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;=======================================================&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;- METODE JACOBI -&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;=======================================================&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])):</span>
+    <span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)):</span>
+        <span class="nb">sum</span><span class="o">=</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="nb">sum</span><span class="o">=</span><span class="nb">sum</span><span class="o">-</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">matrik</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">K</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="o">/</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;iterasi </span><span class="si">{</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;|Xi&quot;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\t\t\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;|errorXi&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)):</span>
+        <span class="n">matrik</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">K</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+        <span class="n">ea</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">((</span><span class="n">true</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">-</span><span class="n">K</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="o">/</span><span class="n">true</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="o">*</span><span class="mi">100</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;|</span><span class="si">%.10f</span><span class="s2">|&quot;</span><span class="o">%</span><span class="n">K</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">%.10f</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">ea</span><span class="p">)</span>
+    <span class="n">K</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;=======================================================&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>dan hasil ketika program diatas dijalankan sebagai berikut:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Penyelesaiaan</span> <span class="n">Sistem</span> <span class="n">Persamaan</span> <span class="n">Linear</span> <span class="n">Dari</span>
+<span class="p">[[</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">]]</span>
+<span class="p">[[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">25</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">11</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">15</span><span class="p">]]</span>
+<span class="n">Menggunakan</span> <span class="n">Metode</span> <span class="n">Jacobi</span>
+<span class="n">Masukkan</span> <span class="n">banyak</span> <span class="n">iterasi</span> <span class="p">:</span> <span class="mi">10</span>
+<span class="o">=======================================================</span>
+<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;-</span> <span class="n">METODE</span> <span class="n">JACOBI</span> <span class="o">-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<span class="o">=======================================================</span>
+<span class="n">iterasi</span> <span class="mi">1</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">0.6000000000</span><span class="o">|</span>      <span class="mf">40.0000000000</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">2.2727272727</span><span class="o">|</span>      <span class="mf">13.6363636364</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">1.1000000000</span><span class="o">|</span>     <span class="mf">10.0000000000</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">1.8750000000</span><span class="o">|</span>      <span class="mf">87.5000000000</span>
+<span class="n">iterasi</span> <span class="mi">2</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">1.0472727273</span><span class="o">|</span>      <span class="mf">4.7272727273</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">1.7159090909</span><span class="o">|</span>      <span class="mf">14.2045454545</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">0.8052272727</span><span class="o">|</span>     <span class="mf">19.4772727273</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">0.8852272727</span><span class="o">|</span>      <span class="mf">11.4772727273</span>
+<span class="n">iterasi</span> <span class="mi">3</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">0.9326363636</span><span class="o">|</span>      <span class="mf">6.7363636364</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">2.0533057851</span><span class="o">|</span>      <span class="mf">2.6652892562</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">1.0493409091</span><span class="o">|</span>     <span class="mf">4.9340909091</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">1.1308806818</span><span class="o">|</span>      <span class="mf">13.0880681818</span>
+<span class="n">iterasi</span> <span class="mi">4</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">1.0151987603</span><span class="o">|</span>      <span class="mf">1.5198760331</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">1.9536957645</span><span class="o">|</span>      <span class="mf">2.3152117769</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">0.9681086260</span><span class="o">|</span>     <span class="mf">3.1891373967</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">0.9738427169</span><span class="o">|</span>      <span class="mf">2.6157283058</span>
+<span class="n">iterasi</span> <span class="mi">5</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">0.9889913017</span><span class="o">|</span>      <span class="mf">1.1008698347</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">2.0114147258</span><span class="o">|</span>      <span class="mf">0.5707362885</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">1.0102859039</span><span class="o">|</span>     <span class="mf">1.0285903926</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">1.0213505101</span><span class="o">|</span>      <span class="mf">2.1350510072</span>
+<span class="n">iterasi</span> <span class="mi">6</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">1.0031986534</span><span class="o">|</span>      <span class="mf">0.3198653362</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">1.9922412607</span><span class="o">|</span>      <span class="mf">0.3879369659</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">0.9945217367</span><span class="o">|</span>     <span class="mf">0.5478263254</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">0.9944337398</span><span class="o">|</span>      <span class="mf">0.5566260154</span>
+<span class="n">iterasi</span> <span class="mi">7</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">0.9981284734</span><span class="o">|</span>      <span class="mf">0.1871526582</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">2.0023068816</span><span class="o">|</span>      <span class="mf">0.1153440776</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">1.0019722306</span><span class="o">|</span>     <span class="mf">0.1972230620</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">1.0035943102</span><span class="o">|</span>      <span class="mf">0.3594310151</span>
+<span class="n">iterasi</span> <span class="mi">8</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">1.0006251343</span><span class="o">|</span>      <span class="mf">0.0625134279</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">1.9986703011</span><span class="o">|</span>      <span class="mf">0.0664849439</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">0.9990355755</span><span class="o">|</span>     <span class="mf">0.0964424487</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">0.9988883906</span><span class="o">|</span>      <span class="mf">0.1111609410</span>
+<span class="n">iterasi</span> <span class="mi">9</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">0.9996741452</span><span class="o">|</span>      <span class="mf">0.0325854785</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">2.0004476715</span><span class="o">|</span>      <span class="mf">0.0223835773</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">1.0003691577</span><span class="o">|</span>     <span class="mf">0.0369157685</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">1.0006191901</span><span class="o">|</span>      <span class="mf">0.0619190140</span>
+<span class="n">iterasi</span> <span class="mi">10</span>   <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">1.0001185987</span><span class="o">|</span>      <span class="mf">0.0118598691</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">1.9997679470</span><span class="o">|</span>      <span class="mf">0.0116026495</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">0.9998281429</span><span class="o">|</span>     <span class="mf">0.0171857126</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">0.9997859785</span><span class="o">|</span>      <span class="mf">0.0214021540</span>
+<span class="o">=======================================================</span>
+</code></pre></div>
                 
               
               
