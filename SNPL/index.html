@@ -310,6 +310,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#c_metode_gauss_seidel" class="md-nav__link">
+    C. Metode Gauss Seidel
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Metode Gauss Seidel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_algoritma_metode_gauss_seidel" class="md-nav__link">
+    1. Algoritma Metode Gauss Seidel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_code_metode_gauss_seidel" class="md-nav__link">
+    2. Code Metode Gauss Seidel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refrensi" class="md-nav__link">
+    Refrensi
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -409,6 +443,40 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_metode_gauss_seidel" class="md-nav__link">
+    C. Metode Gauss Seidel
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Metode Gauss Seidel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_algoritma_metode_gauss_seidel" class="md-nav__link">
+    1. Algoritma Metode Gauss Seidel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_code_metode_gauss_seidel" class="md-nav__link">
+    2. Code Metode Gauss Seidel
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refrensi" class="md-nav__link">
+    Refrensi
+  </a>
   
 </li>
       
@@ -732,6 +800,126 @@ contoh soal:</p>
 <span class="n">X4</span>       <span class="o">|</span><span class="mf">0.9997859785</span><span class="o">|</span>      <span class="mf">0.0214021540</span>
 <span class="o">=======================================================</span>
 </code></pre></div>
+
+<h4 id="c_metode_gauss_seidel">C. Metode Gauss Seidel<a class="headerlink" href="#c_metode_gauss_seidel" title="Permanent link">&para;</a></h4>
+<p>​   Metode Gauss Seidel merupakan sebuah metode yang digunakan untuk menyelesaikan sebuah sistem persamaan liner yang memiliki metode hampir sama dengan metode Jacobi, hanya saja jika pada metode jacobi nilai <script type="math/tex">x_{1}</script>  yang didapatkan dari persamaan pertama tidak digunakan untuk menghitung nilai <script type="math/tex">x_{2}</script> dengan persamaan kedua.Dan <script type="math/tex">x_{2}</script> tidak digunakan untuk menghitung nilai <script type="math/tex">x_{3}</script> begitu seterusnya. Jadi pada persamaan Gauss Seidel <script type="math/tex">x_{1}</script> digunakan untuk mencari <script type="math/tex">x_{2}</script>, lalu <script type="math/tex">x_{2}</script> digunakan untuk mencari <script type="math/tex">x_{3}</script> vegitupun seterusnya. Jadi kesimpulannya metode jacobi tidak menggunakan nilai terbaru sedangkan metode gauss seidel menggunkan nilai terbaru.</p>
+<p>​   Secara umum bentuk persamaan aguss seidel dapat dituliskan seperti berikut:
+<script type="math/tex; mode=display">
+x^{(k+1)}_{i} =\left( b_{i}-\sum^{i-1}_{j=1}a_{ij}x^{(k+1)}_{j}-\sum^{n}_{j=i+1}a_{ij}x^{k}_{j} \right)/a_{ii}
+</script>
+Contoh selesaikan sistem persamaan linier berikut:</p>
+<p>
+<script type="math/tex">10a - b + 2c = 6</script>
+</p>
+<p>
+<script type="math/tex">-a + 11b - c + 3d = 25</script>
+</p>
+<p>
+<script type="math/tex">2a - b + 10c - d = -11</script>
+</p>
+<p>
+<script type="math/tex">3b - c + 8d = 15</script>
+</p>
+<h5 id="1_algoritma_metode_gauss_seidel">1. Algoritma Metode Gauss Seidel<a class="headerlink" href="#1_algoritma_metode_gauss_seidel" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Deklarasikan sistem persamaan linier</li>
+<li>Deklarasikan nilai <script type="math/tex">X_{i}</script> dari hasil analitik</li>
+<li>Buat perulangan untuk menampilkan sistem persamaan linier dalam bentuk matrik</li>
+<li>tentukna banyak iterasi (n)</li>
+<li>Buat perulangan untuk membuat nilai awal <script type="math/tex">X_{i}=0</script>
+</li>
+<li>Buat perulangan for dalam for (perulangan bersarang) dengan ketentuan:</li>
+<li>Perulangan pertama melakukan perulangan sebanyak n inputan untuk menentukan berapakali iterasi yang akan di jalankan</li>
+<li>perulangan kedua berada dalam perulangan pertama dan melakukan perulangan sebanyak panjang dari matrik untuk mengambil hasil nilai di dalam matrik dan mengubah nilai <script type="math/tex">X_{i}</script> menjadi nilai yang dihasilkan dari perulangan ketiga.</li>
+<li>Perulangan ketiga berada di dalam perulangan kedua dan melakukan perulangan sebanyyak panjang dari  matrik untuk mengurangi nilai hasil dengan koefisien yang dikalikan dengan nilai <script type="math/tex">X_{i}</script> dengan mengambil nilai dari matrik.</li>
+<li>perulangan keempat berada didalam perulangan pertama dan melakukan perulangan sebanyak panjang matrik untuk menghitung nilai eror yang dihasilkan kemudian menampilkan nilai <script type="math/tex">X_{i}</script> dan eror yang dihasilkan pada iterasi ke-k</li>
+</ol>
+<h5 id="2_code_metode_gauss_seidel">2. Code Metode Gauss Seidel<a class="headerlink" href="#2_code_metode_gauss_seidel" title="Permanent link">&para;</a></h5>
+<p>berikut ini merupakan code python hasil dari implementasi algoritma di atas</p>
+<div class="codehilite"><pre><span></span><code><span class="n">matrik</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">[[</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],[</span><span class="s2">&quot;X1&quot;</span><span class="p">],[</span><span class="mi">6</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],[</span><span class="s2">&quot;X2&quot;</span><span class="p">],[</span><span class="mi">25</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="s2">&quot;X3&quot;</span><span class="p">],[</span><span class="o">-</span><span class="mi">11</span><span class="p">]],</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],[</span><span class="s2">&quot;X4&quot;</span><span class="p">],[</span><span class="mi">15</span><span class="p">]],</span> 
+<span class="p">]</span>
+<span class="n">true</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penyelesaiaan Sistem Persamaan Linear Dari&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">matrik</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menggunakan Metode Gauss Seidel&quot;</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan banyak iterasi : &quot;</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;=======================================================&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;- METODE GAUSS SEIDEL -&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;=======================================================&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])):</span>
+    <span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)):</span>
+        <span class="n">Xi</span><span class="o">=</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">sum</span><span class="o">=</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="n">i</span> <span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="nb">sum</span><span class="o">=</span><span class="nb">sum</span><span class="o">-</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">matrik</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="nb">sum</span><span class="o">/</span><span class="n">matrik</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;iterasi </span><span class="si">{</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;|Xi&quot;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\t\t\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;|errorXi&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik</span><span class="p">)):</span>
+        <span class="n">ea</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">((</span><span class="n">matrik</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">true</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="o">/</span><span class="n">true</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="o">*</span><span class="mi">100</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;|</span><span class="si">%.10f</span><span class="s2">|&quot;</span><span class="o">%</span><span class="n">matrik</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">%.10f</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">ea</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;=======================================================&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>dan ketika program di atas dijalan kan maka outputnya akan seperti berikut:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Penyelesaiaan</span> <span class="n">Sistem</span> <span class="n">Persamaan</span> <span class="n">Linear</span> <span class="n">Dari</span>
+<span class="p">[[</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">]]</span>
+<span class="p">[[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X2&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">25</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">11</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;X4&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">15</span><span class="p">]]</span>
+<span class="n">Menggunakan</span> <span class="n">Metode</span> <span class="n">Gauss</span> <span class="n">Seidel</span>
+<span class="n">Masukkan</span> <span class="n">banyak</span> <span class="n">iterasi</span> <span class="p">:</span> <span class="mi">5</span>
+<span class="o">=======================================================</span>
+<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;-</span> <span class="n">METODE</span> <span class="n">GAUSS</span> <span class="n">SEIDEL</span> <span class="o">-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<span class="o">=======================================================</span>
+<span class="n">iterasi</span> <span class="mi">1</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">0.6000000000</span><span class="o">|</span>      <span class="mf">40.0000000000</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">2.3272727273</span><span class="o">|</span>      <span class="mf">16.3636363636</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">0.9872727273</span><span class="o">|</span>     <span class="mf">1.2727272727</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">0.8788636364</span><span class="o">|</span>      <span class="mf">12.1136363636</span>
+<span class="n">iterasi</span> <span class="mi">2</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">1.0301818182</span><span class="o">|</span>      <span class="mf">3.0181818182</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">2.0369380165</span><span class="o">|</span>      <span class="mf">1.8469008264</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">1.0144561983</span><span class="o">|</span>     <span class="mf">1.4456198347</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">0.9843412190</span><span class="o">|</span>      <span class="mf">1.5658780992</span>
+<span class="n">iterasi</span> <span class="mi">3</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">1.0065850413</span><span class="o">|</span>      <span class="mf">0.6585041322</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">2.0035550169</span><span class="o">|</span>      <span class="mf">0.1777508452</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">1.0025273847</span><span class="o">|</span>     <span class="mf">0.2527384673</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">0.9983509456</span><span class="o">|</span>      <span class="mf">0.1649054423</span>
+<span class="n">iterasi</span> <span class="mi">4</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">1.0008609786</span><span class="o">|</span>      <span class="mf">0.0860978625</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">2.0002982507</span><span class="o">|</span>      <span class="mf">0.0149125328</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">1.0003072761</span><span class="o">|</span>     <span class="mf">0.0307276102</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">0.9998497465</span><span class="o">|</span>      <span class="mf">0.0150253509</span>
+<span class="n">iterasi</span> <span class="mi">5</span>    <span class="o">|</span><span class="n">Xi</span>             <span class="o">|</span><span class="n">errorXi</span>
+<span class="n">X1</span>       <span class="o">|</span><span class="mf">1.0000912803</span><span class="o">|</span>      <span class="mf">0.0091280286</span>
+<span class="n">X2</span>       <span class="o">|</span><span class="mf">2.0000213422</span><span class="o">|</span>      <span class="mf">0.0010671123</span>
+<span class="n">X3</span>       <span class="o">|-</span><span class="mf">1.0000311472</span><span class="o">|</span>     <span class="mf">0.0031147183</span>
+<span class="n">X4</span>       <span class="o">|</span><span class="mf">0.9999881033</span><span class="o">|</span>      <span class="mf">0.0011896740</span>
+<span class="o">=======================================================</span>
+</code></pre></div>
+
+<h4 id="refrensi">Refrensi<a class="headerlink" href="#refrensi" title="Permanent link">&para;</a></h4>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>https://id.m.wikipedia.org/wiki/Sistem_persamaan_linear&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>https://www.slideshare.net/KhannalPakinde/makalah-metode-numerik-sistem-persamaan-linear&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               
