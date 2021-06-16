@@ -72,6 +72,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#solusi_numeri_persamaan_differensial_biasa" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -240,10 +245,63 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Solusi Numeri Diferensial Biasa
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Solusi Numeri Diferensial Biasa
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1_metode_eular" class="md-nav__link">
+    1. Metode Eular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_algoritma_metode_eular" class="md-nav__link">
+    2. Algoritma Metode Eular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_code_metode_eular" class="md-nav__link">
+    3. Code metode Eular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b_metode_heun" class="md-nav__link">
+    B. Metode Heun
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -256,6 +314,59 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1_metode_eular" class="md-nav__link">
+    1. Metode Eular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_algoritma_metode_eular" class="md-nav__link">
+    2. Algoritma Metode Eular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_code_metode_eular" class="md-nav__link">
+    3. Code metode Eular
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b_metode_heun" class="md-nav__link">
+    B. Metode Heun
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -266,9 +377,112 @@
                   </a>
                 
                 
-                  <h1>Solusi Numeri Diferensial Biasa</h1>
-                
-                <p>hanya kosongan</p>
+                <h1 id="solusi_numeri_persamaan_differensial_biasa">Solusi Numeri Persamaan Differensial Biasa<a class="headerlink" href="#solusi_numeri_persamaan_differensial_biasa" title="Permanent link">&para;</a></h1>
+<p>Persamaan Differensial merupakan sebuah persamaan yang terdiri dari beberapa turunan biasa dari fungsi yang tidak diketahui dari variabel bebas tunggal dan variabel tersebut hanya disimbolkan degna x. Berikut ini beberapa contoh differensial biasa.</p>
+<p>
+<script type="math/tex">1.\ \dfrac{dy}{dx} = x +y\\</script>
+<script type="math/tex">2.\ y^{'} = x^{2}+y^{2}\\</script>
+<script type="math/tex">3.\ \dfrac{2dy}{dx} +x^{2}y-y = 0\\</script>
+<script type="math/tex">4.\ y^{''} + y^{'}cos\ x -3y = sin\ 2x\\</script>
+<script type="math/tex">5.\ 2y^{'''}-23y^{'} = 1 -y^{''}</script>
+</p>
+<p>Variabel bebas dari contoh tersebut adalah <script type="math/tex">x</script> dan variabel terikatnya adalah <script type="math/tex">y</script> yang merupakan fungsi dari x atau juga bisa ditulis y = f(x). Persamaan Differensial Biasa dikelompok kan berdasarkan oredenya yaitu:</p>
+<ol>
+<li>Persamaan Differensial orde 1 dimana turunan tertingginya adalah turunan pertama, pada contoh diatas berada pada nomor 1,2 dan 3/</li>
+<li>Persamaan Differensial orde 2 dimana turunan tertingginya adalah turunan kedua, pada contoh diatas berada pada nomor 4.</li>
+<li>Persamaan Differensian Biasa orde 3 dimana turunan tertingginya adalah turunan ketiga, pada contoh ditas berada pada nomor 5.</li>
+</ol>
+<p>Bentuk baku persamaan differensial biasa dapat ditulis seperti berikut:
+<script type="math/tex; mode=display">
+y^{'} = f(x,y)\ \ \ \ \ \ atau\ \ \ \ \ \ \dfrac{dy}{dx} = f(x,y)
+</script>
+dengan niilai awal y(x0) = y</p>
+<p>​   Persamaan differensial biasa orede satu tidaka mengikuti bentuk umum tersebut jadi harus ditulis ulang agar dapat diselesaikan. Penyelesaian persamaan differensial biasa secara numerik berarti menghitung nilai fungsi di <script type="math/tex">x_{i+1} = h</script> , dengan h merupakan ukuran langkah setiap lelaran. pada metode analitik nilai awal digunakan untuk merperoleh solusi yang unik , sedangkan pada metode numerik nilai awal berfungsi untuk memulai lelaran. </p>
+<p>​   Dibawah ini akan dijelaskan beberapa solusi numerik untuk menyelesaikan persamaan differensial biasa.</p>
+<h5 id="1_metode_eular">1. Metode Eular<a class="headerlink" href="#1_metode_eular" title="Permanent link">&para;</a></h5>
+<p>​   Metode eular adalah metode untuk menyelesaikan persamaan differensial biasa yang dihasilkan daru turunan deret Tylor. Metode eular juga disebut sebagai metode orde pertama karena hanya mengambil sampai suku pertama saja dari deret Tylor. Metode eular juga dapat di turunkan dengan menggunakan metode aturan segi empat untuk menginsterasikan <script type="math/tex">(x,y)</script> pada persamaan differensial. bentuk metode eular sebagai berikut:
+<script type="math/tex; mode=display">
+y(x_{i+1}) - y(x_{i}) = hf(x_{i},y(x_{i}))\\
+atau\\
+y(x_{i+1}) = y(x_{i}) + hf(x_{i},y(x_{i}))
+</script>
+Contoh selesaikan persamaan differensial berikut:</p>
+<p>Diketahui persamaan differensial biasa sebagai berikut
+<script type="math/tex; mode=display">
+\dfrac{dy}{dt} = x + y \ dan\ y(0)=1
+</script>
+gunakan metode eular untuk menghitung y(0,10) dengan ukuran langkah h = 0.02 dan diketahui solusi persamaan differensial biasa sejatinya = 1,1103</p>
+<h5 id="2_algoritma_metode_eular">2. Algoritma Metode Eular<a class="headerlink" href="#2_algoritma_metode_eular" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p>Deklarasikan fungsi persamaan differensial biasa yang akan di selesaikan.</p>
+</li>
+<li>
+<p>Masukkan inputan yang dibutuhkan seperti x(0), y(0), xb dan h</p>
+</li>
+<li>
+<p>Hitung perulangan yang diperlukan dengan menggunakan rumus
+   <script type="math/tex; mode=display">
+   n = (x_{b} - x_{0})/h
+   </script>
+</p>
+</li>
+<li>
+<p>Inisialisasi nilai x dan y awal sama dengan 0 dan y(0).</p>
+</li>
+<li>Tentukan nilai analitiknya untuk menghitung nilai eror</li>
+<li>lakukan perulangan sebanyak n kali.</li>
+<li>Setiap kali melakukan perulangan maka nilai x dan y akan diupdate dengan menggunakn persamaan metode Eular, dan hitung nilai erornya kemudian tampilkan hasilnya</li>
+</ol>
+<h5 id="3_code_metode_eular">3. Code metode Eular<a class="headerlink" href="#3_code_metode_eular" title="Permanent link">&para;</a></h5>
+<p>berikut ini merupakan code hasil dari implementasi algoritma di atas:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Penyelesaian Persamaan Differensial Biasa Menggunakan Metode Euler&quot;</span><span class="p">)</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan Nilai X0 : &quot;</span><span class="p">))</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan Nilai y0 : &quot;</span><span class="p">))</span>
+<span class="n">xb</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan Nilai X yang dicari : &quot;</span><span class="p">))</span>
+<span class="n">h</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Masukkan Nilai h : &quot;</span><span class="p">))</span>
+<span class="n">n</span> <span class="o">=</span> <span class="p">(</span><span class="n">xb</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span><span class="o">/</span><span class="n">h</span>
+<span class="n">iterasi</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y0</span>
+<span class="n">true</span> <span class="o">=</span>  <span class="mf">1.1103</span>
+<span class="n">e</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">true</span><span class="o">-</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;==================================================&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;- METODE EULER -&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;==================================================&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;|i&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">|&#39;</span><span class="p">,</span><span class="s1">&#39;x(i)&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="s1">|&#39;</span><span class="p">,</span><span class="s1">&#39;y(i)</span><span class="se">\t\t</span><span class="s1">|e&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;|</span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">x0</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">|&#39;</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">%f</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">|&#39;</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">%f</span><span class="se">\t</span><span class="s2">|&quot;</span><span class="o">%</span><span class="n">y</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">%f</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">e</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">iterasi</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">h</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">true</span><span class="o">-</span><span class="n">y</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;|</span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">|&#39;</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">%f</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">|&#39;</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">%f</span><span class="se">\t</span><span class="s2">|&quot;</span><span class="o">%</span><span class="n">y</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">%f</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">e</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;==================================================&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>dan ketika code tersbut dijalankan maka outputnya sebagai berikut</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Penyelesaian</span> <span class="n">Persamaan</span> <span class="n">Differensial</span> <span class="n">Biasa</span> <span class="n">Menggunakan</span> <span class="n">Metode</span> <span class="n">Euler</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">X0</span> <span class="p">:</span> <span class="mi">0</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">y0</span> <span class="p">:</span> <span class="mi">1</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">X</span> <span class="n">yang</span> <span class="n">dicari</span> <span class="p">:</span> <span class="mf">0.1</span>
+<span class="n">Masukkan</span> <span class="n">Nilai</span> <span class="n">h</span> <span class="p">:</span> <span class="mf">0.02</span>
+<span class="o">==================================================</span>
+<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;-</span> <span class="n">METODE</span> <span class="n">EULER</span> <span class="o">-&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<span class="o">==================================================</span>
+<span class="o">|</span><span class="n">i</span>  <span class="o">|</span> <span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>      <span class="o">|</span> <span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>      <span class="o">|</span><span class="n">e</span>
+<span class="o">|</span><span class="mi">0</span>  <span class="o">|</span> <span class="mf">0.000000</span>  <span class="o">|</span> <span class="mf">1.000000</span>  <span class="o">|</span> <span class="mf">0.110300</span>
+<span class="o">|</span><span class="mi">1</span>  <span class="o">|</span> <span class="mf">0.020000</span>  <span class="o">|</span> <span class="mf">1.020000</span>  <span class="o">|</span> <span class="mf">0.090300</span>
+<span class="o">|</span><span class="mi">2</span>  <span class="o">|</span> <span class="mf">0.040000</span>  <span class="o">|</span> <span class="mf">1.040800</span>  <span class="o">|</span> <span class="mf">0.069500</span>
+<span class="o">|</span><span class="mi">3</span>  <span class="o">|</span> <span class="mf">0.060000</span>  <span class="o">|</span> <span class="mf">1.062416</span>  <span class="o">|</span> <span class="mf">0.047884</span>
+<span class="o">|</span><span class="mi">4</span>  <span class="o">|</span> <span class="mf">0.080000</span>  <span class="o">|</span> <span class="mf">1.084864</span>  <span class="o">|</span> <span class="mf">0.025436</span>
+<span class="o">|</span><span class="mi">5</span>  <span class="o">|</span> <span class="mf">0.100000</span>  <span class="o">|</span> <span class="mf">1.108162</span>  <span class="o">|</span> <span class="mf">0.002138</span>
+<span class="o">==================================================</span>
+</code></pre></div>
+
+<h4 id="b_metode_heun">B. Metode Heun<a class="headerlink" href="#b_metode_heun" title="Permanent link">&para;</a></h4>
+<p>Metode Heun adalah metode perbaikan dari metode eular yang memiliki nilai eror yang tinggi. </p>
                 
               
               
